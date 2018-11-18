@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Search for Reddit</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+</head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<style>
+body {font-family: "Raleway", Arial, sans-serif}
+.w3-row img {margin-bottom: -8px}
+</style>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:2000px">
+
+  <!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+    <a href="#" class="w3-left w3-button"><h3>Simple Search</h3></a>
+    <a href="#about" class="w3-right w3-button "><h3>About</h3></a>
+  </header>
+  
+  <br>
+  
+  <br>
+
+  <br>
+
+
+  <!-- Photo Grid -->
+  <form action = "/results" method = "POST">
+
+      <h2>Enter Subreddit</h2>
+      <input type="text" name="text" placeholder="Search.."><br>
+      <h2>Enter amount</h2>
+      <input type="text" name="count" placeholder="Amount.."><br>
+
+      <input type="radio" name="userChoice" value="1"> Controversial <br>
+      <input type="radio" name="userChoice" value="2"> Hot <br>
+      <input type="radio" name="userChoice" value="3"> New<br>
+      <input type="radio" name="userChoice" value="4"> Rising<br>
+      <input type="radio" name="userChoice" value="5"> Top<br>
+      <input type="submit" name="search" value="Send">
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+
+
+
+<!-- <div class="styled-select slate">
+<select>
+  <option>Here is the first option</option>
+  <option>The second option</option>
+  <option>The third option</option>
+</select>
+</div> -->
+
+  </form>
+</center>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+<body>
+    <style>
+    body  {
+            background-image: url("static/images/black.jpg")
+          }
+
+    input[type=text] {
+          border: 5px;
+          border-color: #fffff;
+          border-radius: 4px;
+          border-style: double;
+          width: 120px;
+          -webkit-transition: width 0.4s ease-in-out;
+          transition: width 0.4s ease-in-out;
+
+    }
+  input[type=text]:focus {
+  width: 20%;
+}
+    h1 {
+      text-align: center;
+      color: #fff;
+      font-family: "Impact", sans-serif;
+      font-size: 40px;
+      text-shadow: 2px 2px 20px #000000;
+
+    }
+    h2{
+      color: #ffffff;
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      font-size: 30px;
+      text-align: center;
+      text-shadow: 2px 2px 10px #000000;
+
+
+    }
+    
+    h3{
+      color: #fff;
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      font-size: 30px;
+      text-align: center;
+      text-shadow: 2px 2px 10px #000000;
+
+
+    }
+     body {
+      text-align: center;
+      color: #ffffff;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size: 20px;
+      text-shadow: 2px 2px 20px #000000;
+    }
+}
+    </style>
+  <!-- <div class="w3-row">
+    <div class="w3-half">
+      <img src="/w3images/streetart.jpg" style="width:100%">
+      <img src="/w3images/streetart2.jpg" style="width:100%">
+      <img src="/w3images/streetart5.jpg" style="width:100%">
+    </div>
+
+    <div class="w3-half">
+      <img src="/w3images/streetart3.jpg" style="width:100%">
+      <img src="/w3images/streetart4.jpg" style="width:100%">
+    </div>
+  </div> -->
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer / About Section -->
+<footer class="w3-balck w3-padding-64 w3-center" id="about">
+  <h2>About</h2>
+  <!-- <img src="/w3images/boy.jpg" class="w3-image w3-padding-32" width="300" height="300"> -->
+  <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+    <img src = "static/images/simple.png" length = 50 width = 50/>
+    <p>
+      Hello, and welcome to the Simple Search for Reddit client that we have created!
+      This web application allows a user to choose a subreddit, amount, and type of data they
+      want to view in a simple streamlined experience. With this project that our team has worked so
+      hard on we have developed a tool for new redditors to use and try out. It allows you to view the
+      posts and also view the media associated with it. On behalf of our team we hope you enjoy our project
+      and use it.
+    </p>
+    <!-- <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
+    <div class="w3-section">
+      <label><b>Name</b></label>
+      <input class="w3-input w3-border" type="text" required name="Name">
+    </div>
+    <div class="w3-section">
+      <label><b>Email</b></label>
+      <input class="w3-input w3-border" type="text" required name="Email">
+    </div>
+    <div class="w3-section">
+      <label><b>Message</b></label>
+      <input class="w3-input w3-border" required name="Message">
+    </div>
+    <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+  </form> -->
+  <br>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

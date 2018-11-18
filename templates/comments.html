@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comments</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+</head>
+<body>
+    <center>
+    <h1 style="color: rgb(255,255,255)"> Welcome to Simple Search for Reddit!</h1>
+    <p>
+        Here is your output!
+    </p>
+
+    <table border = "1" style="color: rgb(255,255,255)">
+        <tr>
+            <td><b>OP</b></td>
+            <td><b>Comment</b></td>
+        </tr>
+
+        {% for i in range (tableSize) %}
+        <tr>
+            <td>{{ commentAuthorList[i] }}</td>
+            <td>{{ commentBodyList[i] }}</td>
+        </tr>
+        {% endfor %}
+      </center>
+    </table>
+    <center><button onclick="goBack()">Go Back</button></center>
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        body {
+                background-image: url("static/images/black.jpg")
+        }
+    </style>
+</body>
+</html>

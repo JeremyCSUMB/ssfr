@@ -1,0 +1,81 @@
+<!doctype html>
+
+<head>
+    <title>Simple Search for Reddit</title>
+</head>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic Bootstrap Template</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+</head>
+<body>
+  <center>
+  <h1 style="color: rgb(255,255,255) "> Welcome to Simple Search for Reddit!</h1>
+  <p style="color: rgb(255,255,255)">
+      Here is your output!
+  </p>
+
+  <table border = "1" style="color: rgb(255,255,255)">
+      <tr>
+          <td><b>Title</b></td>
+          <td><b>Upvotes</b></td>
+          <td><b>Post ID</b></td>
+          <td><b>Submission URL</b></td>
+          <td><b>Author</b></td>
+      </tr>
+
+      {% for i in range (tableRows) %}
+      <tr>
+          <td>{{ titleOutputList[i] }}</td>
+          <td>{{ scoreOutputList[i] }}</td>
+          <td><form action = "/comments" method = "POST"><input type = "submit" name = "postIDNum" value = "{{ idOutputList[i] }}"></form></td>
+          <td> <a href="{{ urlOutputList[i] }}">Link</a></td>
+          <td>{{ authorOutputList[i] }}</td>
+      </tr>
+      {% endfor %}
+    </center>
+  </table>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+<form action = "/"><input type = "submit" value = "Go Back"></form>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+<style>
+body {
+        background-image: url("static/images/black.jpg")
+}
+
+
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    background-color: #222528;
+    color: white;
+}
+th, td{
+    
+    padding: 4px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-shadow: 2px 2px 20px #000000;
+
+}
+h1,p{
+    text-shadow: 2px 2px 20px #000000;
+
+}
+</style>
